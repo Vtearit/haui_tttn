@@ -34,7 +34,7 @@
 						<select name="fk_category_product_id">
 						<?php 
 							//lay cac ban ghi cua tbl_category_product
-							$category = $this->model->fetch("select * from tbl_category_product order by pk_category_product_id asc");
+							$category = $this->model->fetch("select * from tbl_category_product order by pk_category_product_id desc");
 							foreach($category as $rows)
 							{
 						 ?>
@@ -70,7 +70,6 @@
 								</textarea>
 								<script type="text/javascript">
 									CKEDITOR.replace('c_content');
-									
 								</script>
 							</div>
 						</div>

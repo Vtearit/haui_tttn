@@ -1,25 +1,17 @@
-<?php
+<?php 
+	//start session
 	session_start();
-
-	include 'model/model.php';
-
-	//kiem tra dang nhap, neu chua co du lieu thi yeu cau dang nhap
-	//var_dump(isset($_SESSION["c_email"])); die;
-	if (isset($_SESSION["c_email"]) == false) {
+	//load file model
+	include "model/model.php";
+	//kiểm tra, nếu usẻ chưa đăng nhập thì yêu cầu phải đăng nhập trước khi truy cập trang admin
+	if(isset($_SESSION["c_email"]) == false){
+		include "controller/backend/controller_login.php";
+	}else{
+		//lay bien $_GET["controller"] tu url, sau do gan duong dan de ra duong dan thuc cua file. VD: tren url co controller=logout, khi do se gan duong dan thanh controller_logout.php
 		$controller = isset($_GET["controller"])?$_GET["controller"]:"";
 		if($controller != "")
-		{
-			include "controller/backend/controller_$controller.php";
-		}else
-		{
-			include "controller/backend/controller_login.php";
-		}
-	}else{
-		$controller = isset($_GET["controller"])?$_GET["controller"]:"";
-		if ($controller != "") {
 			$controller = "controller/backend/controller_$controller.php";
-		}
-
-		include 'view/backend/view_layout.php';
+		//load layout
+		include "view/backend/view_layout.php";
 	}
-?>
+ ?>

@@ -12,10 +12,14 @@
 
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner">
-					  <div class="item active"> <img src="public/frontend/images/la.jpg" alt="Los Angeles"> </div>
+					  <!-- <div class="item active"> <img src="public/frontend/images/la.jpg" alt="Los Angeles"> </div>
 					  <div class="item"> <img src="public/frontend/images/slideshow1221b.jpg" alt="Los Angeles"> </div>
 					  <div class="item"> <img src="public/frontend/images/chicago.jpg" alt="Chicago"> </div>
-					  <div class="item"> <img src="public/frontend/images/ny.jpg" alt="New York"> </div>
+					  <div class="item"> <img src="public/frontend/images/ny.jpg" alt="New York"> </div> -->
+					  <div class="item active"> <img src="public/frontend/images/slider1.jpg" alt="slider1" style="width: 100%; height: 450px;"></div>
+					  <div class="item"> <img src="public/frontend/images/slider2.jpg" alt="slider2" style="width: 100%; height: 450px;"></div>
+					  <div class="item"> <img src="public/frontend/images/slider3.jpg" alt="slider3"  style="width: 100%; height: 450px;"></div>
+					  <div class="item"> <img src="public/frontend/images/slider4.jpg" alt="slider4"  style="width: 100%; height: 450px;"></div>
 					</div>
 
 					<!-- Left and right controls --> 

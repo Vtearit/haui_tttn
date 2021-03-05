@@ -11,26 +11,30 @@
 	<meta name="robots" content="noodp,index,follow" />
 	<meta name='revisit-after' content='1 days' />
 	<meta name="keywords" content="">
-	<title>DKT Store</title>
-	<meta name="description" content="DKT Store">
+	<title>HungPhat Computer</title>
+	<meta name="description" content="HungPhat Computer">
 	<meta property="og:type" content="website">
-	<meta property="og:title" content="DKT Store">
-	<meta property="og:image" content="public/frontend/100/047/633/themes/517833/assets/logo221b.png?1481775169361">
-	<meta property="og:image:secure_url" content="public/frontend/100/047/633/themes/517833/assets/logo221b.png?1481775169361">
+	<meta property="og:title" content="HungPhat Computer">
+	<meta property="og:image" content="public/frontend/lib/logo221b.png?1481775169361">
+	<meta property="og:image:secure_url" content="public/frontend/lib/logo221b.png?1481775169361">
 	<meta property="og:url" content="index.html">
-	<meta property="og:site_name" content="DKT Store">
+	<meta property="og:site_name" content="HungPhat Computer">
 	<link rel="canonical" href="index.html">
-	<link rel="shortcut icon" href="public/frontend/100/047/633/themes/517833/assets/favicon221b.png?1481775169361" type="image/x-icon" />
+	<link rel="shortcut icon" href="public/frontend/lib/logo.jpg" type="image/x-icon" />
 	<!-- <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=vietnamese" rel="stylesheet"> -->
-	<link href='public/frontend/100/047/633/themes/517833/assets/font-awesome.min221b.css?1481775169361' rel='stylesheet' type='text/css' />
-	<link href='public/frontend/100/047/633/themes/517833/assets/bootstrap.min221b.css?1481775169361' rel='stylesheet' type='text/css' />
-	<link href='public/frontend/100/047/633/themes/517833/assets/owl.carousel221b.css?1481775169361' rel='stylesheet' type='text/css' />
-	<link href='public/frontend/100/047/633/themes/517833/assets/responsive221b.css?1481775169361' rel='stylesheet' type='text/css' />
-	<link href='public/frontend/100/047/633/themes/517833/assets/styles.scss221b.css?1481775169361' rel='stylesheet' type='text/css' />
-	<script src='public/frontend/100/047/633/themes/517833/assets/jquery.min221b.js?1481775169361' type='text/javascript'></script>
-	<script src='public/frontend/100/047/633/themes/517833/assets/bootstrap.min221b.js?1481775169361' type='text/javascript'></script>
-	<script src='public/frontend/assets/themes_support/api.jquerya87f.js?4' type='text/javascript'></script>
-	<link href='public/frontend/100/047/633/themes/517833/assets/bw-statistics-style221b.css?1481775169361' rel='stylesheet' type='text/css' />
+	<link href='public/frontend/lib/font-awesome.min221b.css?1481775169361' rel='stylesheet' type='text/css' />
+	<link href='public/frontend/lib/bootstrap.min221b.css?1481775169361' rel='stylesheet' type='text/css' />
+	<link href='public/frontend/lib/owl.carousel221b.css?1481775169361' rel='stylesheet' type='text/css' />
+	<link href='public/frontend/lib/responsive.css' rel='stylesheet' type='text/css' />
+	<link href='public/frontend/lib/styles.css' rel='stylesheet' type='text/css' />
+	<script src='public/frontend/lib/jquery.min221b.js?1481775169361' type='text/javascript'></script>
+	<script src='public/frontend/lib/bootstrap.min221b.js?1481775169361' type='text/javascript'></script>
+
+	
+
+
+	<script src='public/frontend/themes_support/api.jquerya87f.js?4' type='text/javascript'></script>
+	<link href='public/frontend/lib/bw-statistics-style221b.css?1481775169361' rel='stylesheet' type='text/css' />
 	</head>
 	<body class="index">
 	<div id="fb-root"></div>
@@ -57,7 +61,7 @@
 	<div class="mid-header">
 	<div class="container">
 	  <div class="row">
-		<div class="col-xs-12 col-sm-12 col-md-3 logo "> <a href="index.html"> <img src="public/frontend/100/047/633/themes/517833/assets/logo221b.png?1481775169361" alt="DKT Store" title="DKT Store" class="img-responsive"> </a> </div>
+		<div class="col-xs-12 col-sm-12 col-md-3 logo "> <a href="index.php"> <img src="public/frontend/lib/logo.jpg" alt="HungPhat Computer" title="HungPhat Computer" class="img-responsive"> </a> </div>
 		<div class="col-xs-12 col-sm-12 col-md-6 header-search"> 
 		  <script type="text/javascript">
 			  function search(){
@@ -72,7 +76,7 @@
 		  </form>
 		</div>
 		<div class="col-xs-12 col-sm-12 col-md-3 mini-cart">
-		  <div class="wrapper-mini-cart"> <span class="icon"><i class="fa fa-shopping-cart"></i></span> <a href="cart"> <span class="mini-cart-count"> 
+		  <div class="wrapper-mini-cart"> <span class="icon"><i class="fa fa-shopping-cart"></i></span> <a href="index.php?controller=cart"> <span class="mini-cart-count"> 
 			<?php 
 				$number = 0;
 				foreach($_SESSION["cart"] as $product)
@@ -128,64 +132,62 @@
 	</header>
 	<!-- end header -->
 	<div class="content">
-	  <div class="container">
-		<h1 style="display:none;">DKT Store</h1>
+	  	<div class="container">
+			<h1 style="display:none;">HungPhat Computer</h1>
 
-		<div class="row">
-		  <div class="col-xs-12 col-md-3"> 
-		   <!-- category product -->
-		<?php include "controller/frontend/controller_category.php"; ?>
-		<!-- end category product -->
-			<!-- end support -->
-			<?php include "controller/frontend/controller_support_online.php"; ?>
-			<!-- end support online --> 
-			<!-- hot news -->
-			<?php include "controller/frontend/controller_hotnews.php"; ?>
-			<!-- end hot news -->
-			<!-- adv -->
-			<img src="public/frontend/images/banner03d5.jpg">
-			<!-- end adv -->
-
-		  </div>
-		  <div class="col-xs-12 col-md-9"> 
-			<!-- main -->
-			<?php
-				if(file_exists($controller))
-					include $controller;
-			?>				
-			<!-- end main --> 
-		  </div>
-		</div>
-		<!-- adv -->
-		<div class="widebanner"> <a href="#"><img src="public/frontend/100/047/633/themes/517833/assets/widebanner221b.jpg?1481775169361" alt="#" class="img-responsive"></a> </div>
-		<!-- end adv --> 
-
-	  </div>
+			<div class="row">
+		  		<div class="col-xs-12 col-md-3"> 
+					<!-- category product -->
+					<?php include "controller/frontend/controller_category.php"; ?>
+					<!-- end category product -->
+					<!-- end support -->
+					<?php include "controller/frontend/controller_support_online.php"; ?>
+					<!-- end support online --> 
+					<!-- hot news -->
+					<?php include "controller/frontend/controller_hotnews.php"; ?>
+					<!-- end hot news -->
+				</div>
+				<div class="col-xs-12 col-md-9"> 
+					<!-- main -->
+					<?php
+						if(file_exists($controller))
+							include $controller;
+					?>				
+					<!-- end main --> 
+				</div>
+			</div>
+	  	</div>
 	</div>
 	<div class="privacy">
 	  <div class="container">
 		<div class="row">
-		  <div class="col-xs-12 col-sm-4">
-			<div class="image"> <img src="public/frontend/100/047/633/themes/517833/assets/ico-service-1221b.png?1481775169361" alt="Giao hàng miễn phí" title="Giao hàng miễn phí" class="img-responsive"> </div>
-			<div class="info">
-			  <h3>Giao hàng miễn phí</h3>
-			  <p>Miễn phí giao hàng trong nội thành Hà Nội</p>
+			<div class="col-xs-12 col-sm-4">
+				<a href="giao-hang-mien-phi">
+					<div class="image"> <img src="public/frontend/lib/ico-service-1221b.png?1481775169361" alt="Giao hàng miễn phí" title="Giao hàng miễn phí" class="img-responsive"> </div>
+					<div class="info">
+					<h3>Giao hàng miễn phí</h3>
+					<p>Miễn phí giao hàng trong nội thành Hà Nội</p>
+					</div>
+				</a>
 			</div>
-		  </div>
-		  <div class="col-xs-12 col-sm-4">
-			<div class="image"> <img src="public/frontend/100/047/633/themes/517833/assets/ico-service-2221b.png?1481775169361" class="img-responsive" alt="Khuyến mại" title="Khuyến mại"> </div>
-			<div class="info">
-			  <h3>Khuyến mại</h3>
-			  <p>Khuyến mại sản phẩm nếu đơn hàng trên 1.000.000đ</p>
+			<div class="col-xs-12 col-sm-4">
+				<a href="khuyen-mai">
+					<div class="image"> <img src="public/frontend/lib/ico-service-2221b.png?1481775169361" class="img-responsive" alt="Khuyến mại" title="Khuyến mại"> </div>
+					<div class="info">
+					<h3>Khuyến mại</h3>
+					<p>Khuyến mại sản phẩm nếu đơn hàng trên 1.000.000đ</p>
+					</div>
+				</a>
 			</div>
-		  </div>
-		  <div class="col-xs-12 col-sm-4">
-			<div class="image"> <img src="public/frontend/100/047/633/themes/517833/assets/ico-service-3221b.png?1481775169361" class="img-responsive" alt="Hoàn trả lại tiền" title="Hoàn trả lại tiền"> </div>
-			<div class="info">
-			  <h3>Hoàn trả lại tiền</h3>
-			  <p>Nếu sản phẩm không đảm bảo chất lượng hoặc sản phẩm không đúng miêu tả</p>
+			<div class="col-xs-12 col-sm-4">
+				<a href="hoan-tra-tien">
+					<div class="image"> <img src="public/frontend/lib/ico-service-3221b.png?1481775169361" class="img-responsive" alt="Hoàn trả lại tiền" title="Hoàn trả lại tiền"> </div>
+					<div class="info">
+					<h3>Hoàn trả lại tiền</h3>
+					<p>Nếu sản phẩm không đảm bảo chất lượng hoặc sản phẩm không đúng miêu tả</p>
+					</div>
+				</a>
 			</div>
-		  </div>
 		</div>
 	  </div>
 	</div>
@@ -194,49 +196,53 @@
 		<div class="container">
 		  <div class="row">
 			<div class="col-xs-12 col-sm-3">
-			  <h3>Về chúng tôi</h3>
-			  <ul class="list-unstyled">
-				<li><a href="index.html">Trang chủ</a></li>
-				<li><a href="gioi-thieu">Giới thiệu</a></li>
-				<li><a href="tin-tuc">Tin tức</a></li>
-				<li><a href="gioi-thieu">Liên hệ</a></li>
-			  </ul>
+				<h3>Về chúng tôi</h3>
+				<ul class="list-unstyled">
+					<li><a href="index.php">Trang chủ</a></li>
+					<li><a href="gioi-thieu">Giới thiệu</a></li>
+					<li><a href="tin-tuc">Tin tức</a></li>
+					<li><a href="gioi-thieu">Liên hệ</a></li>
+				</ul>
 			</div>
 			<div class="col-xs-12 col-sm-3">
-			  <h3>Hướng dẫn</h3>
-			  <ul class="list-unstyled">
-				<li><a href="huo-ng-da-n-mua-ha-ng">Hướng dẫn mua hàng</a></li>
-				<li><a href="huong-dan">Giao nhận và thanh toán</a></li>
-				<li><a href="do-i-tra-va-ba-o-ha-nh">Đổi trả và bảo hành</a></li>
-				<li><a href="account/register">Đăng ký thành viên</a></li>
-			  </ul>
+				<h3>Hướng dẫn</h3>
+				<ul class="list-unstyled">
+					<li><a href="huong-dan-mua-hang">Hướng dẫn mua hàng</a></li>
+					<li><a href="huong-dan">Giao nhận và thanh toán</a></li>
+					<li><a href="doi-tra-va-bao-hanh">Đổi trả và bảo hành</a></li>
+					<li><a href="account/register">Đăng ký thành viên</a></li>
+				</ul>
 			</div>
 			<div class="col-xs-12 col-sm-3">
-			  <h3>Chính sách</h3>
-			  <ul class="list-unstyled">
-				<li><a href="chinh-sach">Chính sách thanh toán</a></li>
-				<li><a href="chi-nh-sa-ch-va-n-chuye-n">Chính sách vận chuyển</a></li>
-				<li><a href="chi-nh-sa-ch-do-i-tra">Chính sách đổi trả</a></li>
-				<li><a href="chi-nh-sa-ch-ba-o-ha-nh">Chính sách bảo hành</a></li>
-			  </ul>
+				<h3>Chính sách</h3>
+				<ul class="list-unstyled">
+					<li><a href="chinh-sach">Chính sách thanh toán</a></li>
+					<li><a href="chinh-sach-van-chuyen">Chính sách vận chuyển</a></li>
+					<li><a href="chinh-sach-doi-tra">Chính sách đổi trả</a></li>
+					<li><a href="chinh-sach-bao-hanh">Chính sách bảo hành</a></li>
+				</ul>
 			</div>
 			<div class="col-xs-12 col-sm-3">
-			  <h3>Điều khoản</h3>
-			  <ul class="list-unstyled">
-				<li><a href="dieu-khoan">Điều khoản sử dụng</a></li>
-				<li><a href="die-u-khoa-n-giao-di-ch">Điều khoản giao dịch</a></li>
-				<li><a href="di-ch-vu-tie-n-i-ch">Dịch vụ tiện ích</a></li>
-				<li><a href="quye-n-so-hu-u-tri-tue">Quyền sở hữu trí tuệ</a></li>
-			  </ul>
+				<h3>Điều khoản</h3>
+				<ul class="list-unstyled">
+					<li><a href="dieu-khoan">Điều khoản sử dụng</a></li>
+					<li><a href="dieu-khoan-giao-dich">Điều khoản giao dịch</a></li>
+					<li><a href="dich-vu-tien-ich">Dịch vụ tiện ích</a></li>
+					<li><a href="quyen-so-huu-tri-tue">Quyền sở hữu trí tuệ</a></li>
+				</ul>
 			</div>
 		  </div>
-		  <div class="payments-method"> <img src="public/frontend/100/047/633/themes/517833/assets/payments-method221b.png?1481775169361" alt="Phương thức thanh toán" title="Phương thức thanh toán"> </div>
+		  	<div class="payments-method">
+		  		<a href="phuong-thuc-thanh-toan">
+			  		<img src="public/frontend/lib/payments-method221b.png?1481775169361" alt="Phương thức thanh toán" title="Phương thức thanh toán">
+				</a>
+			</div>
 		</div>
 	  </div>
 	  <div class="bottom-footer">
 		<div class="container">
 		  <div class="row">
-			<div class="col-xs-12 col-sm-5"> © Bản quyền thuộc về Avent Team</div>
+			<div class="col-xs-12 col-sm-5"> © Bản quyền thuộc về Vu Duc Vuong</div>
 			<div class="col-xs-12 col-sm-7">
 			  <ul class="list-unstyled">
 				<li><a href="index.html">Trang chủ</a></li>
@@ -249,11 +255,11 @@
 		</div>
 	  </div>
 	</footer>
-	<script src='public/frontend/100/047/633/themes/517833/assets/owl.carousel.min221b.js?1481775169361' type='text/javascript'></script> 
-	<script src='public/frontend/100/047/633/themes/517833/assets/responsive-menu221b.js?1481775169361' type='text/javascript'></script> 
-	<script src='public/frontend/100/047/633/themes/517833/assets/elevate-zoom221b.js?1481775169361' type='text/javascript'></script> 
-	<script src='public/frontend/100/047/633/themes/517833/assets/main221b.js?1481775169361' type='text/javascript'></script> 
-	<script src='public/frontend/100/047/633/themes/517833/assets/ajax-cart221b.js?1481775169361' type='text/javascript'></script>
+	<script src='public/frontend/lib/owl.carousel.min221b.js?1481775169361' type='text/javascript'></script> 
+	<script src='public/frontend/lib/responsive-menu221b.js?1481775169361' type='text/javascript'></script> 
+	<script src='public/frontend/lib/elevate-zoom221b.js?1481775169361' type='text/javascript'></script> 
+	<script src='public/frontend/lib/main221b.js?1481775169361' type='text/javascript'></script> 
+	<script src='public/frontend/lib/ajax-cart221b.js?1481775169361' type='text/javascript'></script>
 	<div class="ajax-error-modal modal">
 	  <div class="modal-inner">
 		<div class="ajax-error-title">Lỗi</div>

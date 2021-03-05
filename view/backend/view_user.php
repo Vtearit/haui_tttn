@@ -14,16 +14,17 @@
 						<th>Email</th>
 						<th style="width: 150px;"></th>
 					</tr>
-					<?php
-						foreach ($arr as $value) {
-					?>
+					<?php 
+						foreach($arr as $rows)
+						{
+					 ?>
 					<tr>
-						<td><?php echo $value->c_fullname; ?></td>
-						<td><?php echo $value->c_email; ?></td>
+						<td><?php echo $rows->c_fullname; ?></td>
+						<td><?php echo $rows->c_email; ?></td>
 						<td style="text-align: center;">
-							<a href="admin.php?controller=add_edit_user&act=edit&id=<?php echo $value->pk_user_id ?>">Edit</a>
+							<a href="admin.php?controller=add_edit_user&act=edit&id=<?php echo $rows->pk_user_id; ?>">Edit</a>
 							&nbsp;&nbsp;
-							<a href="admin.php?controller=user&act=delete&id=<?php echo $value->pk_user_id ?>">Delete</a>
+							<a href="admin.php?controller=user&act=delete&id=<?php echo $rows->pk_user_id; ?>">Delete</a>
 						</td>
 					</tr>
 					<?php } ?>

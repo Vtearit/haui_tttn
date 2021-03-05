@@ -10,7 +10,7 @@
 						<div class="row">
 							<div class="col-md-2 text-right">Full name</div>
 							<div class="col-md-10">
-								<input type="text" name="c_fullname" value="<?php echo isset($c_user->c_fullname)?$c_user->c_fullname:''; ?>" class="form-control">
+								<input type="text" name="c_fullname" value="<?php echo isset($arr->c_fullname)?$arr->c_fullname:''; ?>" class="form-control">
 							</div>
 						</div>
 					</div>
@@ -20,7 +20,7 @@
 						<div class="row">
 							<div class="col-md-2 text-right">Email</div>
 							<div class="col-md-10">
-								<input required type="email" name="c_email" value="<?php echo isset($c_user->c_email)?$c_user->c_email:''; ?>" class="form-control">
+								<input required type="email" name="c_email" value="<?php echo isset($arr->c_email)?$arr->c_email:''; ?>" class="form-control">
 							</div>
 						</div>
 					</div>
@@ -30,7 +30,7 @@
 						<div class="row">
 							<div class="col-md-2 text-right">Password</div>
 							<div class="col-md-10">
-<input type="password" name="c_password" value="<?php echo isset($c_user->c_password)?$c_user->c_password:''; ?>" class="form-control">
+<input type="password" name="c_password" <?php if(isset($arr->c_email)){ ?> placeholder='Nhập password mới nếu muốn đổi password' <?php } else { ?> required <?php } ?> class="form-control">
 							</div>
 						</div>
 					</div>

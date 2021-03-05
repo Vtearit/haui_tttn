@@ -8,8 +8,10 @@
 			  	{
 			   ?>
 				<div class="sp_1">
-				  <p><?php echo $rows->c_name; ?></p>
-				  <p><?php echo $rows->c_contact; ?></p>
+					<a href="#">
+						<p><?php echo $rows->c_name; ?></p>
+						<p><?php echo $rows->c_contact; ?></p>
+					</a>
 				</div>
 				<?php } ?>
 				

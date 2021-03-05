@@ -36,7 +36,7 @@
 							<div class="row">
 								<div class="col-md-3"></div>
 								<div class="col-md-9">
-									<input type="submit" value="Login" class="btn btn-primary"> <input type="Reset" value="Reset" class="btn btn-danger"><a href="admin.php?controller=register">Register</a>
+									<input type="submit" value="Login" class="btn btn-primary"> <input type="Reset" value="Reset" class="btn btn-danger">
 								</div>
 							</div>
 						</div>

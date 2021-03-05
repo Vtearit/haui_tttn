@@ -3,6 +3,7 @@
 		file index.php
 	*/
 	session_start();
+	if(!isset($_SESSION['cart'])) $_SESSION['cart'] = array();
 	//load model
 	include "model/model.php";
 	//lay bien $_GET["controller"] tu url, sau do gan duong dan de ra duong dan thuc cua file. VD: tren url co controller=logout, khi do se gan duong dan thanh controller_logout.php

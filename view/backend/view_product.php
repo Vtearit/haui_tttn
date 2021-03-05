@@ -2,10 +2,10 @@
 	<div class="col-md-12">
 		<!-- card -->
 		<div style="margin:15px 0px">
-			<a href="admin.php?controller=add_edit_product&act=add" class="btn btn-primary">Thêm mới</a>
+			<a href="admin.php?controller=add_edit_product&act=add" class="btn btn-primary">Add</a>
 		</div>
 		<div class="card border-primary">
-			<div class="card card-header bg-primary text-white" style="padding:7px !important;">Danh mục sản phẩm</div>
+			<div class="card card-header bg-primary text-white" style="padding:7px !important;">Login</div>
 				<div class="card-body">
 				<!-- table -->
 				<table class="table table-hover table-bordered">
@@ -31,14 +31,14 @@
 						<td>
 							<?php 
 								//lay 1 ban ghi
-								$category = $this->model->fetch_once("select * from tbl_category_product where pk_category_product_id=".$rows->fk_category_product_id);
+								$category = $this->model->fetch_one("select c_name from tbl_category_product where pk_category_product_id=".$rows->fk_category_product_id);
 								echo isset($category->c_name)?$category->c_name:"";
 							 ?>
 						</td>
 						<td style="text-align: center;">
 							<?php if($rows->c_hotproduct == 1){ ?>
 							Hot
-							<?php } ?> 
+							<?php } ?>
 						</td>
 						<td style="text-align: center;">
 							<a href="admin.php?controller=add_edit_product&act=edit&id=<?php echo $rows->pk_product_id; ?>">Edit</a>

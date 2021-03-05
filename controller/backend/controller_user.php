@@ -1,18 +1,17 @@
-<?php
+<?php 
 	class controller_user{
 		public $model;
-
 		public function __construct(){
 			$this->model = new model();
-
-			$act = isset($_GET['act'])?$_GET['act']:"";
-
-			switch ($act) {
-				case 'delete':
-					$id = $_GET['id'];
-					$this->model->delete_user($id);
+			//--------
+			$act = isset($_GET["act"])?$_GET["act"]:"";
+			switch($act){
+				case "delete":
+					$id = isset($_GET["id"])?$_GET["id"]:0;
+					//thuc thi cau truy van
+					$this->model->execute("delete from tbl_user where pk_user_id=$id");
 					header("location:admin.php?controller=user");
-					break;
+				break;
 			}
 			//--------
 			//so ban ghi tren mot trang
@@ -29,9 +28,8 @@
 			$arr = $this->model->fetch("select * from tbl_user order by pk_user_id desc limit $from,$record_per_page");
 			//--------
 			//load view
-			//$data = $this->model->fetch("select * from tbl_user");
-			include 'view/backend/view_user.php';
+			include "view/backend/view_user.php";
 		}
 	}
 	new controller_user();
-?>
+ ?>
