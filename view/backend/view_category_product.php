@@ -5,13 +5,12 @@
 			<a href="admin.php?controller=add_edit_user&act=add" class="btn btn-primary">Add</a>
 		</div>
 		<div class="card border-primary">
-			<div class="card card-header bg-primary text-white" style="padding:7px !important;">User</div>
+			<div class="card card-header bg-primary text-white" style="padding:7px !important;">Danh mục sản phẩm</div>
 				<div class="card-body">
 				<!-- table -->
 				<table class="table table-hover table-bordered">
 					<tr>
-						<th>Họ và tên</th>
-						<th>Email</th>
+						<th>Tên danh mục</th>
 						<th style="width: 150px;"></th>
 					</tr>
 					<?php 
@@ -19,12 +18,11 @@
 						{
 					 ?>
 					<tr>
-						<td><?php echo $rows->c_fullname; ?></td>
-						<td><?php echo $rows->c_email; ?></td>
+						<td><?php echo $rows->c_name; ?></td>
 						<td style="text-align: center;">
-							<a href="admin.php?controller=add_edit_user&act=edit&id=<?php echo $rows->pk_user_id; ?>">Edit</a>
+							<a href="admin.php?controller=add_edit_category_product&act=edit&id=<?php echo $rows->pk_category_product_id; ?>">Edit</a>
 							&nbsp;&nbsp;
-							<a href="admin.php?controller=user&act=delete&id=<?php echo $rows->pk_user_id; ?>">Delete</a>
+							<a href="admin.php?controller=category_product&act=delete&id=<?php echo $rows->pk_category_product_id; ?>">Delete</a>
 						</td>
 					</tr>
 					<?php } ?>
@@ -38,7 +36,7 @@
 							for($i = 1; $i <= $num_page; $i++)
 							{
 						 ?>
-						<li class="page-item"><a class="page-link" href="admin.php?controller=user&p=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+						<li class="page-item"><a class="page-link" href="admin.php?controller=category_product&p=<?php echo $i; ?>"><?php echo $i; ?></a></li>
 						<?php } ?>
 					</ul>
 				</div>
@@ -46,4 +44,4 @@
 		</div>
 		<!-- end card -->
 	</div>
-</div>
+<

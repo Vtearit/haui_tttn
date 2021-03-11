@@ -24,4 +24,12 @@
 
 ```
 
+### Update 11/03/2021:
+
+```sh
+
+- Add gioithieu page, lienhe page
+
+```
+
 #

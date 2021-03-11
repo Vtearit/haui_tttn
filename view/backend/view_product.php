@@ -5,7 +5,7 @@
 			<a href="admin.php?controller=add_edit_product&act=add" class="btn btn-primary">Add</a>
 		</div>
 		<div class="card border-primary">
-			<div class="card card-header bg-primary text-white" style="padding:7px !important;">Login</div>
+			<div class="card card-header bg-primary text-white" style="padding:7px !important;">Sản phẩm</div>
 				<div class="card-body">
 				<!-- table -->
 				<table class="table table-hover table-bordered">

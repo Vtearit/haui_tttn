@@ -16,7 +16,7 @@
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="admin.php">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="admin.php">Trang chủ<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="admin.php?controller=category_product">Danh mục sản phẩm</a>
@@ -31,7 +31,7 @@
             <a class="nav-link" href="admin.php?controller=user">Danh sách người dùng</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="admin.php?controller=logout">Logout</a>
+            <a class="nav-link" href="admin.php?controller=logout">Đăng xuất</a>
           </li>
         </ul>        
       </div>

@@ -5,7 +5,7 @@
 			<a href="admin.php?controller=add_edit_news&act=add" class="btn btn-primary">Add</a>
 		</div>
 		<div class="card border-primary">
-			<div class="card card-header bg-primary text-white" style="padding:7px !important;">Login</div>
+			<div class="card card-header bg-primary text-white" style="padding:7px !important;">Tin tức</div>
 				<div class="card-body">
 				<!-- table -->
 				<table class="table table-hover table-bordered">
@@ -33,7 +33,7 @@
 							<?php } ?>
 						</td>
 						<td style="text-align: center;">
-							<a href="admin.php?controller=add_edit_news&act=edit&id=<?php echo $rows->pk_news_id; ?>">Edit</a>
+							<a href="admin.php?controller=add_edit_news&act=edit&id=<?php echo $rows->pk_news_id; ?>"></a>
 							&nbsp;&nbsp;
 							<a href="admin.php?controller=news&act=delete&id=<?php echo $rows->pk_news_id; ?>">Delete</a>
 						</td>
