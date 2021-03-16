@@ -18,8 +18,16 @@
 						{
 					 ?>
 					<tr>
-						<td><?php echo $rows->tbl_customer.hovaten; ?></td>
-						<td><?php echo $rows->c_name; ?></td>
+						<td>
+							<?php $customer = $this->model->fetch_one("select hovaten from tbl_customer where customer_id=".$rows->customer_id);
+								echo isset($customer->hovaten)?$customer->hovaten:""; ?>
+						
+						</td>
+						<td>
+							<?php $product = $this->model->fetch_one("select c_name from tbl_product where pk_product_id=".$rows->pk_product_id);
+								echo isset($product->c_name)?$product->c_name:""; ?>
+						
+						</td>
 						<td><?php echo $rows->ngaymua; ?></td>
 						<td><?php echo $rows->gia; ?></td>
 						<td style="text-align: center;">

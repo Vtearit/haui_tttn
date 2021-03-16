@@ -32,9 +32,9 @@
 			$order_id = $arr_order_id["order_id"]; 
 			//insert thong tin vao bang chi tiet hoa don: tbl_order_detail
 			foreach($_SESSION["cart"] as $cart){
-				$fk_product_id = $cart["pk_product_id"];
+				$pk_product_id = $cart["pk_product_id"];
 				$c_number = $cart["number"];
-				$this->model->execute("insert into tbl_order_detail(order_id,fk_product_id,c_number) values($order_id,$fk_product_id,$c_number)");	
+				$this->model->execute("insert into tbl_order_detail(order_id,pk_product_id,c_number) values($order_id,$pk_product_id,$c_number)");	
 			}
 			//xoa toan bo gio hang
 			$this->cart_destroy();

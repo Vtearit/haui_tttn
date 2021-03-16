@@ -21,10 +21,10 @@
 					$c_description = $_POST["c_description"];
 					$c_content = $_POST["c_content"];
 					$c_hotproduct = isset($_POST["c_hotproduct"])?1:0;
-					$fk_category_product_id=$_POST["fk_category_product_id"];
+					$pk_category_product_id=$_POST["pk_category_product_id"];
 					$c_price=$_POST["c_price"];
 					//update ban ghi
-					$this->model->execute("update tbl_product set c_name='$c_name',c_description='$c_description',c_content='$c_content',c_hotproduct=$c_hotproduct,fk_category_product_id=$fk_category_product_id,c_price=$c_price where pk_product_id=$id");
+					$this->model->execute("update tbl_product set c_name='$c_name',c_description='$c_description',c_content='$c_content',c_hotproduct=$c_hotproduct,pk_category_product_id=$pk_category_product_id,c_price=$c_price where pk_product_id=$id");
 					//--------
 					//kiem tra, neu user browse anh thi thuc hien upload anh
 					if($_FILES["c_img"]["name"] != ""){
@@ -57,7 +57,7 @@
 					$c_content = $_POST["c_content"];
 					$c_hotproduct = isset($_POST["c_hotproduct"])?1:0;
 					$c_img = "";
-					$fk_category_product_id=$_POST["fk_category_product_id"];
+					$pk_category_product_id=$_POST["pk_category_product_id"];
 					$c_price=$_POST["c_price"];
 					//neu user chon file, thuc hien upload file
 					if($_FILES["c_img"]["name"] != ""){
@@ -67,7 +67,7 @@
 						move_uploaded_file($tmp_name,"public/upload/product/$c_img");
 					}
 					//insert ban ghi
-					$this->model->execute("insert into tbl_product(c_name,c_description,c_content,c_img,c_hotproduct,fk_category_product_id,c_price) values('$c_name','$c_description','$c_content','$c_img',$c_hotproduct,$fk_category_product_id,$c_price)");
+					$this->model->execute("insert into tbl_product(c_name,c_description,c_content,c_img,c_hotproduct,pk_category_product_id,c_price) values('$c_name','$c_description','$c_content','$c_img',$c_hotproduct,$pk_category_product_id,$c_price)");
 					header('location:admin.php?controller=product');
 				break;
 			}	

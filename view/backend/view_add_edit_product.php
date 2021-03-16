@@ -31,14 +31,14 @@
 						<div class="row">
 							<div class="col-md-2 text-right">Danh mục sản phẩm</div>
 							<div class="col-md-10">
-						<select name="fk_category_product_id">
+						<select name="pk_category_product_id">
 						<?php 
 							//lay cac ban ghi cua tbl_category_product
 							$category = $this->model->fetch("select * from tbl_category_product order by pk_category_product_id desc");
 							foreach($category as $rows)
 							{
 						 ?>
-<option <?php echo isset($arr->fk_category_product_id)&&$arr->fk_category_product_id==$rows->pk_category_product_id?"selected":""; ?> value="<?php echo $rows->pk_category_product_id; ?>"><?php echo $rows->c_name; ?></option>
+<option <?php echo isset($arr->pk_category_product_id)&&$arr->pk_category_product_id==$rows->pk_category_product_id?"selected":""; ?> value="<?php echo $rows->pk_category_product_id; ?>"><?php echo $rows->c_name; ?></option>
 						<?php } ?>
 						</select>
 							</div>

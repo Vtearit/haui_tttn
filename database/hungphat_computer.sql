@@ -127,7 +127,7 @@ INSERT INTO `tbl_order` (`order_id`, `customer_id`, `ngaymua`, `gia`) VALUES
 CREATE TABLE `tbl_order_detail` (
   `order_detail_id` int(11) NOT NULL,
   `order_id` int(11) NOT NULL,
-  `fk_product_id` int(11) NOT NULL,
+  `pk_product_id` int(11) NOT NULL,
   `c_number` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -135,7 +135,7 @@ CREATE TABLE `tbl_order_detail` (
 -- Dumping data for table `tbl_order_detail`
 --
 
-INSERT INTO `tbl_order_detail` (`order_detail_id`, `order_id`, `fk_product_id`, `c_number`) VALUES
+INSERT INTO `tbl_order_detail` (`order_detail_id`, `order_id`, `pk_product_id`, `c_number`) VALUES
 (1, 1, 13, 1),
 (2, 1, 12, 1);
 
@@ -147,7 +147,7 @@ INSERT INTO `tbl_order_detail` (`order_detail_id`, `order_id`, `fk_product_id`, 
 
 CREATE TABLE `tbl_product` (
   `pk_product_id` int(11) NOT NULL,
-  `fk_category_product_id` int(11) NOT NULL,
+  `pk_category_product_id` int(11) NOT NULL,
   `c_name` varchar(500) NOT NULL,
   `c_description` varchar(2000) NOT NULL,
   `c_content` text NOT NULL,
@@ -160,7 +160,7 @@ CREATE TABLE `tbl_product` (
 -- Dumping data for table `tbl_product`
 --
 
-INSERT INTO `tbl_product` (`pk_product_id`, `fk_category_product_id`, `c_name`, `c_description`, `c_content`, `c_img`, `c_price`, `c_hotproduct`) VALUES
+INSERT INTO `tbl_product` (`pk_product_id`, `pk_category_product_id`, `c_name`, `c_description`, `c_content`, `c_img`, `c_price`, `c_hotproduct`) VALUES
 (4, 7, 'Màn hình LG 27GL650F-B', '									<p>Thông số sản phẩm</p>\r\n\r\n<ul>\r\n	<li>Độ phân giải 1920 x 1080</li>\r\n	<li>Tần số quét 144 hz</li>\r\n	<li>Độ sáng 400 cd/m2</li>\r\n	<li>Độ tương phản 1000:1</li>\r\n	<li>Thời gian phản ứng 1 ms (GTG)</li>\r\n	<li>Tấm nền IPS (sRGB 99%, Adobe RGB 72%, DCI-P3 78%)</li>\r\n</ul>\r\n								', '									<h3>AMD RADEON FreeSync™</h3>\r\n\r\n<p>Rõ ràng hơn, mượt mà hơn và nhanh hơnVới công nghệ AMD RADEON FreeSync™, người chơi game có thể trải nghiệm chuyển động mượt mà những trò chơi có độ phân giải cao và tốc độ nhanh.Công nghệ này giúp loại bỏ được hiện tượng xé hình và giật hình.</p>\r\n\r\n<p><img alt=\"\" src=\"https://hanoicomputercdn.com/media/lib/48815_27GL6501.jpg\" /></p>\r\n\r\n<h3>HDR10</h3>\r\n\r\n<p>Rõ ràng hơn, chân thực hơnMàn hình này tương thích với HDR10, thể hiện chi tiết ở các vùng sáng và tối của nội dung HDR.Vì vậy, người chơi có thể tận hưởng hình ảnh chân thực và có chiều sâu hơn</p>\r\n\r\n<p><img alt=\"\" src=\"https://hanoicomputercdn.com/media/lib/48815_27GL6502.jpg\" /></p>\r\n\r\n<h3>IPS với 99% sRGB</h3>\r\n\r\n<p>Cảm nhận cảnh chiến đấu với màu sắc trung thựcMàn hình IPS với sRGB 99% có độ chính xác màu sắc vượt trội. Màn hình có góc nhìn rộng hơn, mang đến những cảnh chiến đấu sống động trên chiến trường, đặc biệt các cảnh cháy nổ.</p>\r\n\r\n<p><img alt=\"\" src=\"https://hanoicomputercdn.com/media/lib/48815_27GL6503.jpg\" /></p>\r\n\r\n<h3>144Hz Refresh Rate & 1ms MBR</h3>\r\n\r\n<p>Chuyển động chơi game mượt màVới tốc độ làm mới 144Hz và 1ms Motion Blur Reduction*, các đối tượng được hiển thị rõ ràng mang đến trải nghiệm chơi game mượt mà hơn và chân thực hơn mang lại lợi thế cạnh tranh cho người chơi.</p>\r\n\r\n<p><img alt=\"\" src=\"https://hanoicomputercdn.com/media/lib/48815_27GL6504.jpg\" /></p>\r\n\r\n<h3>Đồng bộ hành động kép</h3>\r\n\r\n<p>Giảm thiểu độ trễ của thao tác đầu vào với công nghệ Đồng bộ hành động động và bạn có thể nắm bắt được mọi khoảnh khắc theo thời gian thực.</p>\r\n\r\n<p> <img alt=\"\" src=\"https://hanoicomputercdn.com/media/lib/48815_27GL6505.jpg\" /></p>\r\n\r\n<h3>Cân bằng tối</h3>\r\n\r\n<p>Duy trì khả năng xem ngay cả trong những cảnh tối. Trình ổn định màu đen của LG cảm nhận những cảnh tối và hiển thị vùng này sáng hơn sao cho bạn có thể tìm ra kẻ thù ẩn nấp và phục kích người chơi của bạn trong bóng tối.</p>\r\n\r\n<h3><img alt=\"\" src=\"https://hanoicomputercdn.com/media/lib/48815_27GL6506.jpg\" /></h3>\r\n\r\n<h3>Crosshair</h3>\r\n\r\n<p>Với tính năng Crosshair, game thủ có thể nâng cấp kỹ năng của mình lên một tầm cao mới. Bằng cách đặt điểm tấn công ở chính giữa màn hình, tính năng này nâng cao độ chính xác trong các game bắn nhau có người chơi là nhân vật chính.</p>\r\n\r\n<p> <img alt=\"\" src=\"https://hanoicomputercdn.com/media/lib/48815_27GL6507.jpg\" /></p>\r\n\r\n<h3>Thiết kế thuận tiện</h3>\r\n\r\n<p>Trải nghiệm chơi game tốt hơnĐó là thiết kế viền 3 cạnh siêu mỏng và chân đế có thể điều chỉnh để thay đổi độ nghiêng và độ cao của màn hình để giúp bạn chơi game thoải mái hơn.</p>\r\n\r\n<p><img alt=\"\" src=\"https://hanoicomputercdn.com/media/lib/48815_27GL6508.jpg\" /></p>\r\n								', '1614873383product8.png', 6989000, 1),
 (5, 6, 'Mainboard ASUS TUF GAMING B560M-PLUS WIFI', '<p>Th&ocirc;ng số sản phẩm</p>\r\n\r\n<ul>\r\n	<li>Chipset: Intel B560</li>\r\n	<li>Socket: LGA1200</li>\r\n	<li>K&iacute;ch thước: M-ATX</li>\r\n	<li>Số khe RAM: 4</li>\r\n</ul>\r\n', '<p>Đang cập nhật...</p>\r\n', '1614873292product7.jpg', 4269000, 1),
 (6, 5, 'Máy in Canon SELPHY CP1300', '<p>Th&ocirc;ng số sản phẩm</p>\r\n\r\n<ul>\r\n	<li>Loại m&aacute;y in: M&aacute;y in ảnh</li>\r\n	<li>Tốc độ: 47 gi&acirc;y với 1 ảnh 4x6</li>\r\n	<li>C&oacute; thể chỉnh sửa ảnh trước khi in</li>\r\n	<li>C&ocirc;ng nghệ in nhiệt thăng hoa m&agrave;u (c&oacute; lớp phủ)</li>\r\n	<li>Sản phẩm sử dụng combo mực, giấy in KP108</li>\r\n	<li>Kh&ocirc;ng đi k&egrave;m mực in v&agrave; giấy in ảnh mẫu</li>\r\n</ul>\r\n', '<h2>M&aacute;y in Wi-Fi di động với nhiều chức năng in</h2>\r\n\r\n<p>M&aacute;y in Wi-Fi cầm tay, nhỏ gọn in h&igrave;nh ảnh chất lượng trực tiếp từ m&aacute;y ảnh của bạn hoặc điện thoại th&ocirc;ng minh tại bất cứ đ&acirc;u, bất kỳ thời điểm n&agrave;o, bất kỳ sự kiện n&agrave;o. Nhờ sử dụng pin t&ugrave;y chọn đủ năng lượng để in được tới 54 h&igrave;nh ảnh, m&aacute;y in n&agrave;y trở th&agrave;nh sản phẩm cơ động hơn bất cứ bao giờ hết. Được trang bị c&aacute;c chức năng như chế độ Wi-Fi Shuffle Print mới, SELPHY CP1300 c&oacute; thể kết hợp c&aacute;c h&igrave;nh ảnh (kết nối với 8 thiết bịth&ocirc;ng minh) để tạo th&agrave;nh một h&igrave;nh ảnh cắt d&aacute;n độc đ&aacute;o tr&ecirc;n một ảnh duy nhất. T&iacute;nh năng bố cục 2x6 inch mới (2 tập mỗi tập 4 ảnh trong một v&ugrave;ng 6 inch) l&agrave;m tăng th&ecirc;m t&iacute;nh đa năng khi người d&ugrave;ng c&oacute; thể tạo được c&aacute;c kiểu in photo booth của ri&ecirc;ng m&igrave;nh.Cuối c&ugrave;ng, với lớp phim đặc biệt bảo vệ ảnh khỏi bụi, nước v&agrave; phai m&agrave;u, c&aacute;c k&yacute; ức c&oacute; thể được lưu lại vĩnh viễn.</p>\r\n\r\n<p>M&agrave;n h&igrave;nh LCD nghi&ecirc;ng k&iacute;ch thước 3.2&rdquo;</p>\r\n\r\n<p>Hỗ trợ in kh&ocirc;ng d&acirc;y (bao gồm AirPrint v&agrave; Mopria Print Service)</p>\r\n\r\n<p>Pin t&ugrave;y chọn (in tới 54 bản in mỗi lần sạc)</p>\r\n', '1614873217product6.jpg', 3299000, 1),

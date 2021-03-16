@@ -7,7 +7,7 @@
 			//so ban ghi tren mot trang
 			$record_per_page = 12;
 			//tinh tong so ban ghi
-			$total = $this->model->count("select * from tbl_product where fk_category_product_id=$category_id");
+			$total = $this->model->count("select * from tbl_product where pk_category_product_id=$category_id");
 			//tinh so trang = tongsobanghi/sobanghitrenmottrang
 			$num_page = ceil($total/$record_per_page);
 			//lay bien trang tu url
@@ -15,7 +15,7 @@
 			//lay tu ban ghi bao nhieu tuong ung trang bao nhieu = tranghientai * soluongbanghi
 			$from = $page*$record_per_page;
 			//lay tat ca cac ban ghi bang ham fetch
-			$arr = $this->model->fetch("select * from tbl_product where fk_category_product_id=$category_id order by pk_product_id desc limit $from,$record_per_page");
+			$arr = $this->model->fetch("select * from tbl_product where pk_category_product_id=$category_id order by pk_product_id desc limit $from,$record_per_page");
 			//--------
 			//load view
 			include "view/frontend/view_product.php";

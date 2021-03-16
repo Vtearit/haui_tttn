@@ -17,14 +17,7 @@
 			//so ban ghi tren mot trang
 			$record_per_page = 4;
 			//tinh tong so ban ghi
-			$total = $this->model->count("select tbl_customer.hovaten, tbl_product.c_name, 
-            tbl_order.ngaymua, tbl_order.gia from tbl_order 
-            inner join tbl_order_detail 
-            on tbl_order.order_id = tbl_order_detail.order_id 
-            inner join tbl_customer 
-            on tbl_order.customer_id = tbl_customer.customer_id 
-            inner join tbl_product 
-            on tbl_order_detail.fk_product_id = tbl_product.pk_product_id");
+			$total = $this->model->count("select * from tbl_order");
 			//tinh so trang = tongsobanghi/sobanghitrenmottrang
 			$num_page = ceil($total/$record_per_page);
 			//lay bien trang tu url
@@ -32,7 +25,7 @@
 			//lay tu ban ghi bao nhieu tuong ung trang bao nhieu = tranghientai * soluongbanghi
 			$from = $page*$record_per_page;
 			//lay tat ca cac ban ghi bang ham fetch
-			$arr = $this->model->fetch("select * from tbl_order order by order_id desc limit $from,$record_per_page");
+			$arr = $this->model->fetch("select * from tbl_order inner join tbl_order_detail on tbl_order.order_id = tbl_order_detail.order_id");
 			//--------
 			//load view
 			include "view/backend/view_order.php";

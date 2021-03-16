@@ -31,7 +31,7 @@
 						<td>
 							<?php 
 								//lay 1 ban ghi
-								$category = $this->model->fetch_one("select c_name from tbl_category_product where pk_category_product_id=".$rows->fk_category_product_id);
+								$category = $this->model->fetch_one("select c_name from tbl_category_product where pk_category_product_id=".$rows->pk_category_product_id);
 								echo isset($category->c_name)?$category->c_name:"";
 							 ?>
 						</td>
